@@ -23,7 +23,7 @@ This project is a **modern registration form webpage** built as part of my learn
 
 ## 🚀 **Live Website**
 
-🔗 [Click here to view the live website on GitHub Pages](https://yourusername.github.io/tech-for-girls-registration)
+🔗 [Click here to view the live website on GitHub Pages](https://prasanna-nagaraju.github.io/Tech_For_Girls/)
 
 ---
 
