@@ -1,0 +1,336 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #f8f9fa;
+        color: #202124;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 640px;
+        margin: 40px auto;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+        overflow: hidden;
+    }
+
+    .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 32px 24px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        opacity: 0.1;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 8px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .header p {
+        font-size: 14px;
+        opacity: 0.9;
+        position: relative;
+        z-index: 1;
+    }
+
+    .form-container {
+        padding: 32px 24px;
+    }
+
+    .form-group {
+        margin-bottom: 28px;
+    }
+
+    .form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #202124;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .form-label .icon {
+        color: #5f6368;
+        font-size: 18px;
+    }
+
+    .form-label .required {
+        color: #d93025;
+        margin-left: 4px;
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        font-size: 16px;
+        font-family: inherit;
+        background: #fff;
+        transition: all 0.2s ease;
+        outline: none;
+    }
+
+    .form-input:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 0 1px #1a73e8;
+    }
+
+    .form-input:hover:not(:focus) {
+        border-color: #5f6368;
+    }
+
+    .form-input::placeholder {
+        color: #5f6368;
+    }
+
+    .file-upload {
+        position: relative;
+    }
+
+    .file-upload-wrapper {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        background: #f8f9fa;
+        border: 2px dashed #dadce0;
+        border-radius: 8px;
+        padding: 24px;
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+
+    .file-upload-wrapper:hover {
+        border-color: #1a73e8;
+        background: #e8f0fe;
+    }
+
+    .file-upload-wrapper input[type="file"] {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .file-upload-icon {
+        font-size: 48px;
+        color: #5f6368;
+        margin-bottom: 16px;
+    }
+
+    .file-upload-text {
+        font-size: 16px;
+        color: #1a73e8;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    .file-upload-hint {
+        font-size: 14px;
+        color: #5f6368;
+    }
+
+    .file-upload-name {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #137333;
+        font-weight: 500;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        font-family: inherit;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-whatsapp {
+        background: #25d366;
+        color: white;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .btn-whatsapp:hover {
+        background: #128c7e;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-whatsapp:active {
+        transform: translateY(0);
+    }
+
+    .btn-submit {
+        background: #1a73e8;
+        color: white;
+        width: 100%;
+    }
+
+    .btn-submit:hover {
+        background: #1557b0;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(26, 115, 232, 0.4);
+    }
+
+    .btn-submit:disabled {
+        background: #dadce0;
+        color: #5f6368;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .counter {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 12px 16px;
+        background: #e8f0fe;
+        border-radius: 8px;
+        border-left: 4px solid #1a73e8;
+    }
+
+    .counter .count {
+        font-weight: 600;
+        color: #1a73e8;
+        font-size: 18px;
+    }
+
+    .counter-text {
+        font-size: 14px;
+        color: #5f6368;
+        margin-left: 8px;
+    }
+
+    .success-message {
+        display: none;
+        text-align: center;
+        padding: 32px 24px;
+        background: #e6f4ea;
+        border-radius: 8px;
+        margin: 24px;
+        border-left: 4px solid #137333;
+    }
+
+    .success-message.show {
+        display: block;
+    }
+
+    .message-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    .message-text {
+        font-size: 16px;
+        color: #137333;
+        font-weight: 500;
+    }
+
+    .loading {
+        display: none;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .loading.show {
+        display: block;
+    }
+
+    .spinner {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border: 3px solid #dadce0;
+        border-radius: 50%;
+        border-top-color: #1a73e8;
+        animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .progress-bar {
+        height: 4px;
+        background: #e8f0fe;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #1a73e8, #4285f4);
+        transition: width 0.3s ease;
+        border-radius: 2px;
+    }
+
+    .note {
+        background: #fef7e0;
+        border: 1px solid #fdd663;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 24px;
+        font-size: 14px;
+        color: #b06000;
+    }
+
+    .note .icon {
+        margin-right: 8px;
+        color: #f9ab00;
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            margin: 20px;
+            border-radius: 8px;
+        }
+        
+        .form-container {
+            padding: 24px 16px;
+        }
+        
+        .header {
+            padding: 24px 16px;
+        }
+    }
